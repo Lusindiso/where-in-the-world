@@ -1,0 +1,19 @@
+.Header {
+  background-color: hsl(209, 23%, 22%);
+  grid-row: 1;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr minmax(80vw, 94vw) 1fr;
+}
+.heading {
+  grid-row: 1;
+  grid-column: 2/-2;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.header_link {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}

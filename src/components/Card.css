@@ -1,0 +1,40 @@
+.card {
+  height: 33rem;
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  background-color: hsl(209, 23%, 22%);
+  transition: all 0.1s ease;
+  backface-visibility: hidden;
+  overflow: hidden;
+  text-decoration: none;
+}
+.card:hover {
+  transform: scale(1.1) translateY(1px);
+  cursor: pointer;
+}
+
+.card__content {
+  padding: 2rem 2rem 4rem 2rem;
+  font-size: 1.4rem;
+}
+.card__heading {
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+}
+.card__item {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card__item span {
+  font-weight: 300;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card__list {
+  list-style: none;
+}

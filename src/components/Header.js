@@ -7,9 +7,9 @@ const Header = () => {
     <div className='Header'>
       <div className='heading'>
         <Link to='/' className='header_link'>
-          Where in the world
+          Where in the world?
         </Link>
-        <span>Dark Mode</span>
+        <span className='mode'>Dark Mode</span>
       </div>
     </div>
   );

@@ -4,8 +4,3 @@
   grid-template-rows: 7vh min-content;
   grid-template-columns: 1fr minmax(80vw, 85vw) 1fr;
 }
-
-.link {
-  text-decoration: none;
-  color: hsl(0, 0%, 100%);
-}

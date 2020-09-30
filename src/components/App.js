@@ -11,10 +11,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className='App'>
+        <div className='App' id='app'>
           <Header />
 
-          <Route path='/' exact component={CountryList} className='main' />
+          <Route path='/' exact component={CountryList} />
           <Route path='/details' exact component={CountryDetails} />
         </div>
       </BrowserRouter>

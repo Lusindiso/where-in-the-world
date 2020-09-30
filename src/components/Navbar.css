@@ -1,10 +1,14 @@
 .search-input {
   width: 30vw;
   height: 7vh;
-  background-color: hsl(209, 23%, 22%);
+  background-color: hsl(0, 0%, 100%);
   border: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: hsl(200, 15%, 8%);
   border-radius: 5px;
   padding-left: 5rem;
+}
+.search-input.is-dark {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
 }

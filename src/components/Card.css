@@ -2,12 +2,16 @@
   height: 33rem;
   border-radius: 5px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  background-color: hsl(209, 23%, 22%);
+  background-color: hsl(0, 0%, 100%);
   transition: all 0.1s ease;
   backface-visibility: hidden;
   overflow: hidden;
   text-decoration: none;
 }
+.card.is-dark {
+  background-color: hsl(209, 23%, 22%);
+}
+
 .card:hover {
   transform: scale(1.1) translateY(1px);
   cursor: pointer;

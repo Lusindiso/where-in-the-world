@@ -11,17 +11,34 @@ html {
 }
 
 body {
-  background-color: hsl(207, 26%, 17%);
   font-family: sans-serif;
-  color: white;
 }
 
 .App {
   display: grid;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 10vh minmax(90vh, min-content);
   grid-template-columns: 1fr minmax(80vw, 85vw) 1fr;
   grid-gap: 5rem;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
 }
+
+.App.is-dark {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+.link,
+.link:hover {
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+}
+.link.is-dark,
+.link.is-dark:hover {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
 .container {
   grid-column: 1/-1;
   display: grid;
@@ -50,6 +67,10 @@ body {
   grid-column-gap: 2.5rem;
   grid-row-gap: 5rem;
   justify-content: space-between;
+}
+
+.main:not(:last-child) {
+  background: hsl(209, 23%, 22%);
 }
 @media (max-width: 1050px) {
   .main {

@@ -1,13 +1,17 @@
 .button {
   border: none;
-  background-color: hsl(209, 23%, 22%);
+  background-color: hsl(0, 0%, 100%);
   padding: 1rem 4rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   font-size: 1.4rem;
-  color: white;
+  color: hsl(200, 15%, 8%);
   border-radius: 5px;
   transition: all 0.1s ease;
+}
+.button.is-dark {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
 }
 
 .button:hover {

@@ -26,6 +26,7 @@ const CountryList = props => {
         <div key={country.id}>
           <Link
             className='link'
+            id='link'
             to='/details'
             onClick={() => props.selectCountry(country)}
           >

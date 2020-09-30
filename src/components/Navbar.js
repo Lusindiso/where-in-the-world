@@ -11,6 +11,7 @@ const Navbar = ({ handleChange, searchTerm }) => {
       <input
         type='text'
         className='search-input'
+        id='search-input'
         placeholder='Search for country'
         onChange={onHandleChange}
         value={searchTerm}

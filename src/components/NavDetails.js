@@ -7,7 +7,12 @@ import './NavDetails.css';
 
 const NavDetails = props => {
   return (
-    <Link to='/' onClick={() => props.unselectCountry} className='button'>
+    <Link
+      to='/'
+      onClick={() => props.unselectCountry}
+      className='button link'
+      id='link'
+    >
       <span>&#x2190;</span> Back
     </Link>
   );

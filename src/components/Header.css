@@ -4,9 +4,9 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1fr minmax(80vw, 85vw) 1fr;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
 }
-.Header.is-dark {
+.App.is-dark .Header {
   background-color: hsl(209, 23%, 22%);
   color: hsl(0, 0, 100%);
 }
@@ -17,13 +17,13 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  margin: 1.5rem 0;
+  margin: 1.4rem 0;
   line-height: 1.4;
 }
 
 .mode {
   font-size: 1.5rem;
   font-weight: 400;
-  margin: 1.5rem 0;
+  margin: 1.4rem 0;
   cursor: pointer;
 }

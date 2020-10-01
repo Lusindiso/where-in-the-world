@@ -1,14 +1,14 @@
 .card {
   height: 33rem;
   border-radius: 5px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   background-color: hsl(0, 0%, 100%);
   transition: all 0.1s ease;
   backface-visibility: hidden;
   overflow: hidden;
   text-decoration: none;
 }
-.card.is-dark {
+.App.is-dark .card {
   background-color: hsl(209, 23%, 22%);
 }
 

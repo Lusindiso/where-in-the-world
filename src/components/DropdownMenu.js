@@ -1,23 +1,33 @@
 import React from 'react';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
+import './DropdownMenu.css';
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ handleClick, filterTerm }) => {
+  const onHandleClick = e => {
+    handleClick(e);
+  };
   return (
-    <DropdownButton
-      alignRight
-      title='Dropdown right'
-      id='dropdown-menu-align-right'
-      btn-primary={{ color: 'red' }}
-    >
-      <Dropdown.Item eventKey='Africa' btn-primary={{ color: 'red' }}>
-        Africa
-      </Dropdown.Item>
-      <Dropdown.Item eventKey='Americas'>Americas</Dropdown.Item>
-      <Dropdown.Item eventKey='Asia'>Asia</Dropdown.Item>
-      <Dropdown.Item eventKey='Europe'>Europe</Dropdown.Item>
-      <Dropdown.Item eventKey='Oceania'>Oceania</Dropdown.Item>
-    </DropdownButton>
+    <div className='dropdown'>
+      <button className='dropbtn' id='dropbtn'>
+        Filter by Region
+      </button>
+      <div className='dropdown-content' id='dropdown-content'>
+        <span onClick={onHandleClick} className='Africa'>
+          Africa
+        </span>
+        <span onClick={onHandleClick} className='Americas'>
+          Americas
+        </span>
+        <span onClick={onHandleClick} className='Asia'>
+          Asia
+        </span>
+        <span onClick={onHandleClick} className='Europe'>
+          Europe
+        </span>
+        <span onClick={onHandleClick} className='Oceania'>
+          Oceania
+        </span>
+      </div>
+    </div>
   );
 };
 

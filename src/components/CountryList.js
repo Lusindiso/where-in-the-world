@@ -8,6 +8,7 @@ import './CountryList.css';
 
 const CountryList = props => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [filterTerm, setFilterTerm] = useState('');
   useEffect(() => {
     props.fetchCountry();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -17,27 +18,35 @@ const CountryList = props => {
     setSearchTerm(e.target.value);
   };
 
+  const handleClick = e => {
+    setFilterTerm(e.target.className);
+  };
+
   const renderList = () =>
     props.countries
       .filter(item =>
         item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
       )
+      .filter(term => term.region.includes(filterTerm))
       .map(country => (
-        <div key={country.id}>
-          <Link
-            className='link'
-            id='link'
-            to='/details'
-            onClick={() => props.selectCountry(country)}
-          >
-            <Card country={country} />
-          </Link>
-        </div>
+        <Link
+          key={country.id}
+          className='link'
+          to='/details'
+          onClick={() => props.selectCountry(country)}
+        >
+          <Card country={country} />
+        </Link>
       ));
 
   return (
     <div className='container'>
-      <Navbar handleChange={handleChange} searchTerm={searchTerm} />
+      <Navbar
+        handleChange={handleChange}
+        handleClick={handleClick}
+        filterTerm={filterTerm}
+        searchTerm={searchTerm}
+      />
       <div className='main'>{renderList()}</div>;
     </div>
   );

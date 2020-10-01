@@ -5,14 +5,6 @@ import './Header.css';
 const modeSwitcher = () => {
   let app = document.getElementById('app');
   app.classList.toggle('is-dark');
-  let header = document.getElementById('header');
-  header.classList.toggle('is-dark');
-  let link = document.getElementById('link');
-  link.classList.toggle('is-dark');
-  let search = document.getElementById('search-input');
-  search.classList.toggle('is-dark');
-  // let card = document.querySelectorAll('card');
-  // card.classList.toggle('is-dark');
 };
 const Header = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import DropdownMenu from './DropdownMenu';
 import './Navbar.css';
 
-const Navbar = ({ handleChange, searchTerm }) => {
+const Navbar = ({ handleChange, searchTerm, handleClick, filterTerm }) => {
   const onHandleChange = e => {
     handleChange(e);
   };
@@ -16,7 +16,7 @@ const Navbar = ({ handleChange, searchTerm }) => {
         onChange={onHandleChange}
         value={searchTerm}
       />
-      <DropdownMenu />
+      <DropdownMenu handleClick={handleClick} filterTerm={filterTerm} />
     </div>
   );
 };

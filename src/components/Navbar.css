@@ -1,14 +1,20 @@
 .search-input {
   width: 30vw;
-  height: 7vh;
+  height: 5rem;
   background-color: hsl(0, 0%, 100%);
   border: none;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   color: hsl(200, 15%, 8%);
+  font-size: 1.4rem;
   border-radius: 5px;
   padding-left: 5rem;
 }
-.search-input.is-dark {
+
+.App.is-dark .search-input {
   background-color: hsl(209, 23%, 22%);
   color: hsl(0, 0%, 100%);
+}
+
+i {
+  font-size: 2rem;
 }

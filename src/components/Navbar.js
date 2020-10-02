@@ -17,6 +17,7 @@ const Navbar = ({ handleChange, searchTerm, handleClick, filterTerm }) => {
           placeholder='Search for country'
           onChange={onHandleChange}
           value={searchTerm}
+          aria-label='Search input'
         />
       </div>
       <DropdownMenu handleClick={handleClick} filterTerm={filterTerm} />

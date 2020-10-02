@@ -3,17 +3,17 @@
   grid-row: 1;
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 1fr minmax(80vw, 80vw) 1fr;
+  grid-template-columns: 1fr minmax(100rem, 80vw) 1fr;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-  @media screen and (max-width: 1023px) {
-    grid-template-columns: 1fr 90vw 1fr;
+  @media screen and (max-width: 1140px) {
+    grid-template-columns: 1fr minmax(74rem, 90vw) 1fr;
   }
   @media screen and (max-width: 767px) {
-    grid-template-columns: 1fr 94vw 1fr;
+    grid-template-columns: 1fr minmax(45rem, 94vw) 1fr;
   }
   @media screen and (max-width: 480px) {
-    grid-template-columns: 1fr 96vw 1fr;
+    grid-template-columns: 1fr minmax(35rem, 96vw) 1fr;
   }
 }
 .App.is-dark .Header {

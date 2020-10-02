@@ -1,5 +1,6 @@
 .search-input {
-  width: 30vw;
+  width: 25vw;
+  min-width: 20rem;
   height: 5rem;
   background-color: hsl(0, 0%, 100%);
   border: none;
@@ -7,7 +8,8 @@
   color: hsl(200, 15%, 8%);
   font-size: 1.4rem;
   border-radius: 5px;
-  padding-left: 5rem;
+  padding-left: 6rem;
+  transition: all 0.2s ease;
 }
 
 .App.is-dark .search-input {
@@ -15,6 +17,8 @@
   color: hsl(0, 0%, 100%);
 }
 
-i {
-  font-size: 2rem;
+.fa-search {
+  position: absolute;
+  font-size: 1.7rem;
+  padding: 1.6rem 3rem;
 }

@@ -8,7 +8,7 @@ import './NavDetails.css';
 const NavDetails = props => {
   return (
     <Link to='/' onClick={() => props.unselectCountry} className='button link'>
-      Back
+      <i className='fa fa-arrow-left'></i> Back
     </Link>
   );
 };

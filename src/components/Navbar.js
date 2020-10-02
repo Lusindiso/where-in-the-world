@@ -8,14 +8,17 @@ const Navbar = ({ handleChange, searchTerm, handleClick, filterTerm }) => {
   };
   return (
     <div className='nav'>
-      <input
-        type='text'
-        className='search-input'
-        id='search-input'
-        placeholder='Search for country'
-        onChange={onHandleChange}
-        value={searchTerm}
-      />
+      <div className='searcg'>
+        <i className='fas fa-search'></i>
+        <input
+          type='text'
+          className='search-input'
+          id='search-input'
+          placeholder='Search for country'
+          onChange={onHandleChange}
+          value={searchTerm}
+        />
+      </div>
       <DropdownMenu handleClick={handleClick} filterTerm={filterTerm} />
     </div>
   );

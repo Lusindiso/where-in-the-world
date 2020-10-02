@@ -6,12 +6,16 @@
   cursor: pointer;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  transition: all 0.2s ease;
 }
 .App.is-dark .dropbtn {
   background-color: hsl(209, 23%, 22%);
   color: hsl(0, 0%, 100%);
 }
 
+.fa-chevron-down {
+  padding: 0 1rem 0 1rem;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -23,6 +27,7 @@
   width: 100%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
+  transition: all 0.2s ease;
 }
 .App.is-dark .dropdown-content {
   background-color: hsl(209, 23%, 22%);
@@ -37,6 +42,10 @@
 .dropdown-content span:hover {
   cursor: pointer;
   background-color: hsl(0, 0%, 90%);
+  transition: all 0.2s ease;
+}
+.App.is-dark .dropdown-content span:hover {
+  background-color: hsl(209, 23%, 17%);
 }
 
 .dropdown:hover .dropdown-content {

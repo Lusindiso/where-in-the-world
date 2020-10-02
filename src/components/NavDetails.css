@@ -2,7 +2,7 @@
   border: none;
   height: 3rem;
   background-color: hsl(0, 0%, 100%);
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 2rem 0.5rem 0;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   text-decoration: none;
   font-size: 1.4rem;
@@ -18,4 +18,7 @@
 .button:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   transform: scale(1.1);
+}
+.fa-arrow-left {
+  padding: 0 1rem 0 2rem;
 }

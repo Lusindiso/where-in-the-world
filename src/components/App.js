@@ -5,7 +5,7 @@ import Header from './Header';
 import CountryList from './CountryList';
 import CountryDetails from './CountryDetails';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

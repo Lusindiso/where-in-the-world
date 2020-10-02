@@ -1,0 +1,55 @@
+.Header {
+  background-color: hsl(0, 0%, 100%);
+  grid-row: 1;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr minmax(80vw, 80vw) 1fr;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  @media screen and (max-width: 1023px) {
+    grid-template-columns: 1fr 90vw 1fr;
+  }
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr 94vw 1fr;
+  }
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr 96vw 1fr;
+  }
+}
+.App.is-dark .Header {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0, 100%);
+}
+.heading {
+  grid-row: 1;
+  grid-column: 2/-2;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 1.4rem 0;
+  line-height: 1.4;
+}
+
+.mode-dark {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.4rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.App.is-dark .mode-dark {
+  display: none;
+}
+
+.mode-light {
+  display: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.4rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.App.is-dark .mode-light {
+  display: block;
+}

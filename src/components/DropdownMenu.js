@@ -8,7 +8,7 @@ const DropdownMenu = ({ handleClick, filterTerm }) => {
   return (
     <div className='dropdown'>
       <button className='dropbtn' id='dropbtn'>
-        Filter by Region
+        Filter by Region <i className='fas fa-chevron-down'></i>
       </button>
       <div className='dropdown-content' id='dropdown-content'>
         <span onClick={onHandleClick} className='Africa'>

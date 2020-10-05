@@ -6,6 +6,10 @@ Thanks for checking out my front-end coding project.
 
 This project is the results of a front-end coding challenge I took on [Frontend Mentor](https://www.frontendmentor.io)
 
+
+
+Live preview of the app at (https://countriesintheworld.netlify.app/)
+
 ## Description
 
 The challenge was to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it in a web page.
@@ -37,6 +41,5 @@ Desktop preview of the design.
 - JSX
 - CSS3
 - SASS/SCSS
-- Bootstrap
 - Webpack
 - npm

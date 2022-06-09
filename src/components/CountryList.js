@@ -28,8 +28,8 @@ const CountryList = props => {
       return props.countries
         .filter(item =>{
           console.log(item)
-          return item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
-      })
+          return item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()}),
+      )
         .filter(term => term.region.includes(filterTerm))
         .map(country => (
           <Link

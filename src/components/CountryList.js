@@ -26,9 +26,6 @@ const CountryList = props => {
     console.log(props.countries)
     if(props.countries.length>0){
       return props.countries
-        .filter(item =>
-          item.name.toLowerCase()
-      )
         .filter(term => term.region.includes(filterTerm))
         .map(country => (
           <Link

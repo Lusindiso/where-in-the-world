@@ -23,21 +23,23 @@ const CountryList = props => {
   };
 
   const renderList = () =>
-    props.countries
-      .filter(item =>
-        item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
-      )
-      .filter(term => term.region.includes(filterTerm))
-      .map(country => (
-        <Link
-          key={country.id}
-          className='link'
-          to='/details'
-          onClick={() => props.selectCountry(country)}
-        >
-          <Card country={country} />
-        </Link>
-      ));
+    if(props.countries){
+      props.countries
+        .filter(item =>
+          item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
+        )
+        .filter(term => term.region.includes(filterTerm))
+        .map(country => (
+          <Link
+            key={country.id}
+            className='link'
+            to='/details'
+            onClick={() => props.selectCountry(country)}
+          >
+            <Card country={country} />
+          </Link>
+        ));
+    }
 
   return (
     <div className='container'>

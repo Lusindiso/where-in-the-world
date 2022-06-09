@@ -22,12 +22,8 @@ const CountryList = props => {
     setFilterTerm(e.target.className);
   };
 
-  const renderList = () =>{
-    console.log(props.countries)
-    if(props.countries.length>0){
-      return props.countries
-        .filter(term => term.region.includes(filterTerm))
-        .map(country => (
+  const renderList = () => 
+    props.countries.map(country => (
           <Link
             key={country.id}
             className='link'
@@ -37,8 +33,6 @@ const CountryList = props => {
             <Card country={country} />
           </Link>
         ));
-    }
-  }
 
   return (
     <div className='container'>

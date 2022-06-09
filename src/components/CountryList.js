@@ -23,7 +23,7 @@ const CountryList = props => {
   };
 
   const renderList = () =>{
-    console.log(state.countries)
+    console.log(countries)
     console.log(props.countries)
     if(state.countries.length>0){
       return state.countries

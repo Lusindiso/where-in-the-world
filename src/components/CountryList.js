@@ -22,7 +22,7 @@ const CountryList = props => {
     setFilterTerm(e.target.className);
   };
 
-  const renderList = () =>
+  const renderList = () =>{
     if(props.countries){
       props.countries
         .filter(item =>
@@ -40,6 +40,7 @@ const CountryList = props => {
           </Link>
         ));
     }
+  }
 
   return (
     <div className='container'>

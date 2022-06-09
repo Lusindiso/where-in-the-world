@@ -23,8 +23,10 @@ const CountryList = props => {
   };
 
   const renderList = () =>{
-    if(props.countries.length>0){
-      return props.countries
+    console.log(state.countries)
+    console.log(props.countries)
+    if(state.countries.length>0){
+      return state.countries
         .filter(item =>
           item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
         )

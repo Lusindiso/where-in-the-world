@@ -26,9 +26,8 @@ const CountryList = props => {
     console.log(props.countries)
     if(props.countries.length>0){
       return props.countries
-        .filter(item =>{
-          console.log(item)
-          return item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())}
+        .filter(item =>
+          item.name.toLowerCase()
       )
         .filter(term => term.region.includes(filterTerm))
         .map(country => (

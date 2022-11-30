@@ -15,16 +15,16 @@ const CountryDetails = ({ country, countries, selectCountry }) => {
       <div className='details'>
         <div className='country-flag'>
           <img
-            src={country.flag}
-            alt={`${country.name} flag`}
+            src={country.flags.png}
+            alt={`${country.name.common} flag`}
             className='flag'
           />
         </div>
         <div className='country-content'>
-          <h2 className='country__heading'>{country.name}</h2>
+          <h2 className='country__heading'>{country.name.common}</h2>
           <ul className='country__list-left'>
             <li className='country__item'>
-              Native Name: <span>{country.nativeName}</span>
+              Native Name: <span>{Object.values(country.name.nativeName)[0].common}</span>
             </li>
             <li className='country__item'>
               Population: <span>{country.population}</span>
@@ -41,18 +41,18 @@ const CountryDetails = ({ country, countries, selectCountry }) => {
           </ul>
           <ul className='country__list-right'>
             <li className='country__item'>
-              Top Level Domain: <span>{country.topLevelDomain}</span>
+              Top Level Domain: <span>{country.altSpellings[0]}</span>
             </li>
             <li className='country__item'>
               Currencies:
-              {country.currencies.map(currency => (
-                <span> {currency.name} </span>
+              {Object.values(country.currencies).map(currency => (
+                <span key={currency.name}> {currency.name} </span>
               ))}
             </li>
             <li className='country__item'>
               Languages:
-              {country.languages.map(language => (
-                <span> {language.name},</span>
+              {Object.values(country.languages).map(language => (
+                <span key={language}> {language}, </span>
               ))}
             </li>
           </ul>
@@ -60,14 +60,15 @@ const CountryDetails = ({ country, countries, selectCountry }) => {
             Border Countries:
             {country.borders.map(border =>
               countries
-                .filter(item => item.alpha3Code === border)
+                .filter(item => item.cca3 === border)
                 .map(state => (
                   <Link
+                    key={state.name.common}
                     to='/details'
                     onClick={() => selectCountry(state)}
                     className='button link'
                   >
-                    {state.name}
+                    {' '+state.name.common}
                   </Link>
                 )),
             )}

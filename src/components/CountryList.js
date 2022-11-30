@@ -22,17 +22,22 @@ const CountryList = props => {
     setFilterTerm(e.target.className);
   };
 
-  const renderList = () => 
-    props.countries.map(country => (
-          <Link
-            key={country.id}
-            className='link'
-            to='/details'
-            onClick={() => props.selectCountry(country)}
-          >
-            <Card country={country} />
-          </Link>
-        ));
+  const renderList = () =>
+    props.countries
+      .filter(item =>
+        item.name.common.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
+      )
+      .filter(term => term.region.includes(filterTerm))
+      .map(country => (
+        <Link
+          key={country.name.common}
+          className='link'
+          to='/details'
+          onClick={() => props.selectCountry(country)}
+        >
+          <Card country={country} />
+        </Link>
+      ));
 
   return (
     <div className='container'>
@@ -48,7 +53,6 @@ const CountryList = props => {
 };
 
 const mapStateToProps = state => {
-  console.log(state.countries);
   return { countries: state.countries };
 };
 

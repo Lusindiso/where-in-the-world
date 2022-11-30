@@ -109,7 +109,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse :heart:
+- Frontend Mentor :heart:
 
 ## 📝 License
 

@@ -21,16 +21,18 @@ const CountryList = props => {
   const handleClick = e => {
     setFilterTerm(e.target.className);
   };
-
+  if(props.countries.length>0){
+    
+  }
   const renderList = () =>
     props.countries
       .filter(item =>
-        item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
+        item.name.common.toLowerCase().includes(searchTerm.toLocaleLowerCase()),
       )
       .filter(term => term.region.includes(filterTerm))
       .map(country => (
         <Link
-          key={country.id}
+          key={country.name.common}
           className='link'
           to='/details'
           onClick={() => props.selectCountry(country)}
@@ -53,7 +55,6 @@ const CountryList = props => {
 };
 
 const mapStateToProps = state => {
-  console.log(state.countries);
   return { countries: state.countries };
 };
 

@@ -21,9 +21,7 @@ const CountryList = props => {
   const handleClick = e => {
     setFilterTerm(e.target.className);
   };
-  if(props.countries.length>0){
-    
-  }
+
   const renderList = () =>
     props.countries
       .filter(item =>
